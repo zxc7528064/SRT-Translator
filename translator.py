@@ -163,9 +163,6 @@ if __name__ == "__main__":
 
     # 開始批量翻譯
     batch_translate(source, target)
-<<<<<<< HEAD
 
 
     aaa
-=======
->>>>>>> 9356d3d4ca62e7bba49a2dc16d7736152b1594a1
