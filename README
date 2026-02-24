@@ -1,0 +1,63 @@
+# SRT-Translator
+
+基於 OpenAI API 的穩定型 SRT 字幕批量翻譯工具。
+
+本工具專為 `.srt` 字幕格式設計，能在翻譯成繁體中文的同時，完整保留：
+
+- 字幕編號（Index）
+- 時間戳記格式（Timestamp）
+- 原始段落結構
+- 技術術語英文不變
+- 換行格式不被破壞
+
+---
+
+## 功能特色
+
+- 區塊式翻譯（Block-based Processing）
+- 格式安全重建（Format-safe Reconstruction）
+- 支援批量處理
+- 穩定避免 ID Mapping 錯亂
+- 結構簡潔、可維護性高
+
+---
+
+## 安裝方式
+
+```bash
+git clone https://github.com/zxc7528064/SRT-Translator.git
+cd SRT-Translator
+pip install -r requirements.txt
+```
+
+## API 金鑰設定
+
+請先設定 OpenAI API Key：
+
+### Windows（PowerShell）
+
+```bash=
+setx OPENAI_API_KEY "你的_API_KEY"
+```
+
+設定完成後請重新開啟終端機。
+
+### macOS / Linux 
+
+```bash=
+export OPENAI_API_KEY="你的_API_KEY"
+```
+
+## 使用方式
+
+在 translator.py 中設定輸入與輸出檔案：
+
+process_srt("input.srt", "output_zh.srt")
+
+然後執行：
+
+```
+python translator.py
+```
+
+
