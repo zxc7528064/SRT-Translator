@@ -163,6 +163,3 @@ if __name__ == "__main__":
 
     # 開始批量翻譯
     batch_translate(source, target)
-
-
-    aaa
